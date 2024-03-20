@@ -1,0 +1,45 @@
+{
+  "name": "@packasso/release-zx-semrel",
+  "dependencies": {
+    "@packasso/core": "workspace:*"
+  },
+  "exports": {
+    ".": {
+      "development": "./src/main/ts/index.ts",
+      "require": "./target/cjs/index.cjs",
+      "import": "./target/esm/index.mjs",
+      "types": "./target/esm/index.d.ts"
+    },
+    "./package.json": "./package.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qiwi/packasso.git"
+  },
+  "bugs": {
+    "url": "https://github.com/qiwi/packasso/issues"
+  },
+  "homepage": "https://qiwi.github.io/packasso",
+  "license": "MIT",
+  "type": "module",
+  "main": "./target/cjs/index.cjs",
+  "module": "./target/esm/index.mjs",
+  "types": "./target/esm/index.d.ts",
+  "files": [
+    "target/cjs/**/*",
+    "target/esm/**/*",
+    "target/resources/**/*"
+  ],
+  "eslintConfig": {
+    "extends": "eslint-config-qiwi"
+  },
+  "prettier": "prettier-config-qiwi",
+  "version": "0.0.0",
+  "publishConfig": {
+    "access": "public"
+  },
+  "release": {
+    "cmd": "yarn",
+    "changelog": "changelog"
+  }
+}
